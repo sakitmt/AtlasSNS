@@ -40,7 +40,7 @@ class UsersController extends Controller
             //保存のファイル名を構築
             $filenameToStore = $filename."_".time().".".$extension;
 
-            $path = $request->file("images")->storeAs("public/user_images", $filenameToStore);
+            $path = $request->file("images")->storeAs("public", $filenameToStore);
         }
 
         $up_username = $request->input('username');

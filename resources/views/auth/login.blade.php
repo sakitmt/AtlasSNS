@@ -4,7 +4,7 @@
 
 {!! Form::open() !!}
 
-<p>AtlasSNSへようこそテストテスト</p>
+<p>AtlasSNSへようこそ</p>
 
 {{ Form::label('e-mail') }}
 {{ Form::text('mail',null,['class' => 'input']) }}
