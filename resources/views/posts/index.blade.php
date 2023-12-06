@@ -30,7 +30,7 @@
     @csrf
     <div class="area-browsing">
         <div class="area-user-icon"><!--    ユーザーアイコン    -->
-            <img class="user-icon rounded-circle"  width="50" height="50" src="{{ asset('storage/user_images/' .auth()->user()->images )}}"> <!-- ユーザーアイコンはユーザーによって変わるように修正 -->
+            <img class="user-icon rounded-circle"  width="50" height="50" src="{{ asset('storage/user_images/' .$post->user->images )}}"> <!-- ユーザーアイコンはユーザーによって変わるように修正 -->
         </div>
         <div class="area-contents">
             <div class="area-username">
@@ -48,6 +48,7 @@
                 <tr>{{ $post -> post }}</tr>
             </div>
             <div class="area-btn">
+                @if (Auth::user()->id == $post->user_id)
                 <div class="content">
                     <!-- 投稿の編集ボタン -->
                     <a class="js-modal-open" href="" post={{ $post -> post }} post_id={{ $post -> id }}>
@@ -58,6 +59,7 @@
                 <a class="trash-btn" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')" >
                     <img class="trash-img" src="images/trash.png" alt="削除" onmouseover="this.src='images/trash-h.png'" onmouseout="this.src='images/trash.png'">
                 </a>
+                @endif
                 <!-- form :利用者の入力が必要なとき　a :ボタン操作のみなど  -->
             </div>
         </div>

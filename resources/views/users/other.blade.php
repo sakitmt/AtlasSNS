@@ -4,15 +4,8 @@
 
 
 <div class="flex-box icon-area">
-
-
-
-        <div class="icon-margin flex-box">
-
-
-
-
-            <div class="follow-btn">
+    <div class="icon-margin flex-box">
+        <div class="follow-btn post-area">
                 @if (auth()->user()->isFollowing($user->id))
                     <form action="{{ route('unFollow', ['user' => $user->id]) }}" method="POST">
                         {{ csrf_field() }}
@@ -27,11 +20,11 @@
                         <button type="submit" class="btn btn-primary">フォローする</button>
                     </form>
                 @endif
-            </div>
-
         </div>
 
     </div>
+
+</div>
 
 
 

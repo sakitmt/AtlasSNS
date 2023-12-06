@@ -141,6 +141,7 @@ header{
 }
 .side-bae-text {
     text-align: left;
+    color: #000;
 }
 #confirm {
     padding: 20px 0px 20px 15px;
@@ -160,12 +161,14 @@ header{
 .text-primary {
     color: #fff;
 }
+.btn-primary a {
+    color: #fff;
+}
 .btn {
     text-decoration: none;
 }
 a {
     text-decoration: none;
-    color: #fff;
 }
 
 /* 投稿フォーム */

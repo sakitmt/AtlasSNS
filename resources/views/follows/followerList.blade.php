@@ -29,7 +29,7 @@
         @if(auth()->user()->isFollowed($post->user_id))
             <div class="area-browsing">
                 <div class="area-user-icon">
-                    <a href="{{ route('other',['userdata'=>$user->id]) }}">
+                    <a href="{{ route('other',['userdata'=>$post->id]) }}">
                     <img src="{{ asset('storage/user_images/' .$post->images )}}" class="rounded-circle" width="50" height="50">
                     </a>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="area-contents">
                     <div class="area-username">
                         <div class="area-username-name">
-                            <P>{{ $post->username }}</P>
+                            <p>{{ $post->username }}</p>
                         </div>
 
                         <div class="area-daytime">
