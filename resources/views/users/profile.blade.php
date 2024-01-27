@@ -43,7 +43,12 @@
     {{ Form::password('password',null,['class' => 'input']) }}<br>
     {{ Form::password('password_confirmation',null,['class' => 'input']) }}<br>
     {{ Form::text('bio',$auth->bio,['class' => 'input']) }}<br>
-    {{ Form::file('images', ['id'=>'file-image'])}}<br>
+    <label class="file-select-button">{{ Form::file('images', ['id'=>'file-image'])}}<br>ファイルを選択</label>
+    <script>
+      document.getElementById("file-image").addEventListener("change", function(e){
+      e.target.nextSibling.nodeValue = e.target.files.length ? e.target.files[0].name : "ファイルを選択";
+      });
+    </script>
 
   </div>
 
@@ -53,7 +58,7 @@
 
 
 <div class="update-btn">
-  {{ Form::submit('更新',['class' => 'btn btn-danger']) }}
+  {{ Form::submit('更新',['class' => 'btn btn-danger update-btn']) }}
 </div>
 
 

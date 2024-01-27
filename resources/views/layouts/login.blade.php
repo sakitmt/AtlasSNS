@@ -42,9 +42,9 @@
                     <input type="checkbox" id="check">
                     <label class="down-menu" for="check"></label>
                     <ul class="global nav-menu">
-                        <li><a class="home-a" href="/top">HOME</a></li>
-                        <li class="prof-a"><a class="prof-w" href="/profile">プロフィール編集</a></li>
-                        <li><a class="logout-a" href="/logout">ログアウト</a></li>
+                        <li class="menu"><a class="menu" href="/top">HOME</a></li>
+                        <li class="menu"><a class="menu" href="/profile">プロフィール編集</a></li>
+                        <li class="menu"><a class="menu" href="/logout">ログアウト</a></li>
                     </ul>
                 </nav>
                 <div class="user-icon"> <!--ログインした人の画像-->
