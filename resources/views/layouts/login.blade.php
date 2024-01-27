@@ -35,14 +35,14 @@
 <body>
     <header>
         <div id="head">
-            <h1><a href="/top"><img class="img_atlas" src="images/atlas.png" alt="Atlas"></a></h1>
+            <h1><a href="/top"><img class="img_atlas" src="/images/atlas.png" alt="Atlas"></a></h1>
             <div id="head-menu">
                 <p class="username">{{ Auth::user()->username }}さん</p>
                 <nav class="global">
-                    <input type="checkbox" id="check"></input>
+                    <input type="checkbox" id="check">
                     <label class="down-menu" for="check"></label>
                     <ul class="global nav-menu">
-                        <li><a class="home-a" href="/top">HOME</a></a></li>
+                        <li><a class="home-a" href="/top">HOME</a></li>
                         <li class="prof-a"><a class="prof-w" href="/profile">プロフィール編集</a></li>
                         <li><a class="logout-a" href="/logout">ログアウト</a></li>
                     </ul>

@@ -17,9 +17,9 @@ $(function(){
     });
 
     // 背景部分や閉じるボタン(js-modal-close)が押されたら発火
-    $('.js-modal-close').on('click',function(){
+    //$('.js-modal-close').on('click',function(){
         // モーダルの中身(class="js-modal")を非表示
-        $('.js-modal').fadeOut();
-        return false;
-    });
+    //    $('.js-modal').fadeOut();
+    //    return false;
+    //});
 });
