@@ -43,7 +43,7 @@
     {{ Form::password('password',null,['class' => 'input']) }}<br>
     {{ Form::password('password_confirmation',null,['class' => 'input']) }}<br>
     {{ Form::text('bio',$auth->bio,['class' => 'input']) }}<br>
-    <label class="file-select-button">{{ Form::file('images', ['id'=>'file-image'])}}<br>ファイルを選択</label>
+    <label class="file-select-button">{{ Form::file('images', ['id'=>'file-image'])}}<br><div class="picup">ファイルを選択</div></label>
     <script>
       document.getElementById("file-image").addEventListener("change", function(e){
       e.target.nextSibling.nodeValue = e.target.files.length ? e.target.files[0].name : "ファイルを選択";

@@ -183,7 +183,7 @@ class UsersController extends Controller
             ->get();
         }
 
-        return view('users.search', ['all_users'  => $all_users,'keyword'  => $search]);
+        return view('users.search', ['all_users'  => $all_users,'search'  => $search]);
     }
 
     public function userdata(User $user, Post $post, Follow $follow ,$userdata)

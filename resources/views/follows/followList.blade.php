@@ -13,7 +13,7 @@
                 <div class="followicon">
                     <div>
                         <a href="{{ route('other',['userdata'=>$user->id]) }}">
-                            <img src="{{ asset('storage/user_images/' .$user->images )}}" class="rounded-circle" width="50" height="50">
+                            <img src="{{ asset('storage/user_images/' .$user->images )}}" class="rounded-circle list-icon" width="50" height="50">
                         </a>
                     </div>
                 </div>

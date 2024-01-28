@@ -11,15 +11,14 @@
     </div>
 
     <div class="search-user">
-      {!! Form::button('<i class="fas fa-search test-icon"></i>', ['class' => "btn", 'type' => 'submit' ]) !!}
+      {!! Form::button('<img src="images/search.png" class="fas search-btn"></i>', ['class' => "btn", 'type' => 'submit' ]) !!}
     </div>
 
     @if (isset( $search ))
+    <div class="search-word">
 
-    <div class="search-text">
-      検索ワード:{{ $search }}
+      <div class="search-text">検索ワード：{{ $search }}</div>
     </div>
-
     @endif
 
   </div>

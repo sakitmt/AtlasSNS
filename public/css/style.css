@@ -17,6 +17,7 @@ header{
     color: #fff;
     font-weight: 500;
     font-size: 18px;
+    margin-bottom: 0;
 }
 .img_atlas {
     height: 35px;
@@ -41,7 +42,7 @@ header{
     font-size: 0px; /* ラベルと開く部分を分離する時は数値を入れる */
 }
 .global label{
-    font-size: 16px; /* ラベルの文字サイズ */
+    font-size: 20px; /* ラベルの文字サイズ */
     font-weight: bold;
     text-align: center;
     background-color: transparent; /* ラベルの背景色 */
@@ -80,7 +81,7 @@ header{
     width: 20%;
     right: 0px;
     position: fixed;
-    margin-top: 32px;
+    margin-top: 24px;
     font-size: 20px;
     text-align: center;
     align-items: center;
@@ -98,6 +99,9 @@ header{
     font-style: none;
     transition-delay: 1s;
     color: #848484;
+}
+.down-menu {
+    padding-top: 10px;
 }
 
 
@@ -220,6 +224,7 @@ textarea::placeholder {
     height: 45px;
     padding-bottom: 10px;
 }
+
 /* 投稿表示エリア */
 .area-browsing {
     width: 100%;
@@ -289,12 +294,36 @@ textarea::placeholder {
     height: 150px;
     border-bottom: solid 7px #E0E0E0;
 }
-.search-user {
-    height: 50px;
+.search-box {
+    display: flex;
+    padding-top: 55px;
 }
-.search-user .btn {
-    height: 50px;
-    width: 50px;
+.search-space {
+    height: 40px;
+    width: 250px;
+    margin-left: 55px;
+    border: solid 0.5px #333333;
+    padding-left: 20px;
+    border-radius: .3rem;
+    font-size: 20px;
+}
+.search-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: .3rem;
+}
+.search-word {
+    text-align: right;
+    margin: 0 auto 0 auto;
+}
+.search-text {
+    height: 40px;
+
+    flex-basis: 25%;
+    font-size: 20px;
+}
+.search-user {
+    margin-top: -6px;
 }
 
 
@@ -310,6 +339,8 @@ textarea::placeholder {
 .search-username {
     flex-basis: 60%;
     padding-left: 10%;
+    font-size: 20px;
+    font-weight: 320;
 }
 .search-username a {
     color: #000;
@@ -341,8 +372,8 @@ textarea::placeholder {
     display: flex;
     width: 70%;
 }
-.followicon {
-    padding-right: 7px;
+.list-icon {
+    margin-right: 10px;
 }
 
 
@@ -413,6 +444,7 @@ textarea::placeholder {
 .profile-content-title label {
     margin-top: 30px;
     height: 30px;
+    padding-top: 8px;
 }
 .profile-form {
     width: 40%;
@@ -420,6 +452,7 @@ textarea::placeholder {
 .profile-form input {
     width: 100%;
     margin-top: 30px;
+    padding-left: 10px;
     height: 30px;
     border: 0.25px solid #8e8e8e;
     background-color: #efefef;
@@ -441,4 +474,9 @@ textarea::placeholder {
 .update-btn {
     width: 150px;
     margin: 15px auto 20px auto;
+}
+.picup {
+    background-color: #fff;
+    width: 200px;
+    margin: 0 auto;
 }
