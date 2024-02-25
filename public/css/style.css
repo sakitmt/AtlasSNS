@@ -16,7 +16,7 @@ header{
 .username {
     color: #fff;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 0;
 }
 .img_atlas {
@@ -33,6 +33,10 @@ header{
 }
 #check {
     display: none;
+}
+#side-bar {
+    font-size: 18px;
+    font-weight: 200;
 }
 
 
@@ -247,8 +251,8 @@ textarea::placeholder {
 }
 .area-daytime {
     margin-left: auto;
-    font-weight: 150;
-    font-size: 10px;
+    color: #7d7d7d;
+    font-size: 12px;
 }
 .area-post {
     width: 90%;
@@ -453,7 +457,6 @@ textarea::placeholder {
     display: flex;
     width: 100%;
     margin-top: 30px;
-    padding-top: 30px;
 }
 .prof-user-icon {
     width: 30%;
@@ -461,23 +464,29 @@ textarea::placeholder {
     margin-top: 30px;
     padding-right: 30px;
 }
-.profile-content-title {
-    width: 20%;
+.profile-title {
+    width: 30%;
+    padding-top: 2px;
+    font-size: 20px;
 }
-.profile-content-title label {
-    margin-top: 30px;
-    height: 30px;
-    padding-top: 8px;
+.profile-block {
+    display: block;
+    width: 70%;
 }
 .profile-form {
-    width: 40%;
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+}
+.profile-content {
+    width: 50%;
+    font-size: 18px;
 }
 .profile-form input {
     width: 100%;
-    margin-top: 30px;
     padding-left: 10px;
-    height: 30px;
-    border: 0.25px solid #8e8e8e;
+    height: 35px;
+    border: 1px solid #8e8e8e;
     background-color: #efefef;
 }
 #file-image {
@@ -485,8 +494,7 @@ textarea::placeholder {
 }
 .file-select-button {
     width: 100%;
-    margin-top: 30px;
-    border: 0.25px solid #8e8e8e;
+    border: 1px solid #8e8e8e;
     height: 100px;
     background-color: #efefef;
     color: #ACACAC;
@@ -502,4 +510,11 @@ textarea::placeholder {
     background-color: #fff;
     width: 200px;
     margin: 0 auto;
+}
+.profile-alert {
+    padding: 0 0 0 5px;
+    color: #ff003f;
+    margin: 0;
+    font-size: 15px;
+    background-color: #F8D7D9;
 }

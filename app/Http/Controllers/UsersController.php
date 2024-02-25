@@ -111,8 +111,8 @@ class UsersController extends Controller
             $validator = Validator::make($data,[
                 'username' => 'required|string|min:2|max:12',
                 'mail' => 'required|string|email|min:5|max:40|unique:users,mail,'.$id.',id',
-                'password' => 'string|min:8|max:20|confirmed',
-                'password_confirmation' => 'string|min:8|max: 20',
+                'password' => 'string|min:8|max:20|required',
+                'password_confirmation' => 'string|min:8|max:20|confirmed',
                 'bio' => 'max:150',
             ]);
 
@@ -174,10 +174,10 @@ class UsersController extends Controller
         if(!empty($search)){
             $all_users = \DB::table('users')
             ->where('username', 'LIKE', "%{$search}%")
+            ->whereNotIn('id', [Auth::id()])
             ->get();
         }
         else{
-
             $all_users = \DB::table('users')
             ->where('id', '!=', auth()->user()->id)
             ->get();

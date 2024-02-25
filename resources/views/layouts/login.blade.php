@@ -37,7 +37,7 @@
         <div id="head">
             <h1><a href="/top"><img class="img_atlas" src="/images/atlas.png" alt="Atlas"></a></h1>
             <div id="head-menu">
-                <p class="username">{{ Auth::user()->username }}さん</p>
+                <p class="username">{{ Auth::user()->username }} さん</p>
                 <nav class="global">
                     <input type="checkbox" id="check">
                     <label class="down-menu" for="check"></label>

@@ -18,10 +18,23 @@ class PostsController extends Controller
     public function index(){
         //$posts = Post::get();
         $posts = Post::with('user')->get();
+        $posts = Post::with('user')
+            ->select('users.id', 'users.username', 'users.images', 'posts.user_id', 'posts.post', 'posts.created_at')
+            ->leftjoin('users', 'users.id', '=', 'posts.user_id')
+            ->orderBy('created_at', 'DESC')
+            ->get();
+
         return view('posts.index', [
             'posts' => $posts
         ]);
     }
+    /*public function index() {
+        $posts = Post::with('user')->whereIn('user_id', Auth::user_id()->follows()->pluck('followed_id'))->get();
+        return view('posts.index',[
+            'posts' => $posts,
+        ]);
+    }*/
+
 
     protected function validator(array $posts){
         return Validator::make($posts, [
@@ -63,6 +76,27 @@ class PostsController extends Controller
 
         return redirect('/top');
     }
+
+    /*public function update(Request $request){
+        if($request->isMethod('upPost')){
+            $id = $request->input('id');
+            $up_post = $request->input("upPost");
+            $validate = $this->validator($up_post);
+
+            if ($validate->fails()) {
+                return redirect('/top')
+                    ->withInput()
+                    ->withErrors($validate);
+            } else {
+                \DB::table('posts')
+                ->where('id', $id)
+                ->update(
+                    ['post' => $up_post]
+                );
+            }
+        }
+        return redirect('/top');
+    }*/
 
     public function delete($id)
     {

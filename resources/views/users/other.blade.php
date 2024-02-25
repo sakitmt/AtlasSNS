@@ -4,7 +4,7 @@
     <div class="flex-box icon-area">
         <div class="icon-margin flex-box">
             <div class="follow-btn post-area">
-                @if (auth()->user()->isFollowed($user->id))
+                @if (auth()->user()->id)
                     <div class="user-icon-area">
                         <img src="{{ asset('storage/user_images/' .$user->images )}}" class="rounded-circle" width="50" height="50">
                     </div>
