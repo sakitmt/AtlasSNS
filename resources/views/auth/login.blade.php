@@ -25,7 +25,7 @@
                     {{ Form::submit('LOGIN',['class' => 'btn btn-danger']) }}
                 </div>
             </div>
-            <p>
+            <p class="register-link">
                 <a class="new-user" href="/register">新規ユーザーの方はこちら</a>
             </p>
 

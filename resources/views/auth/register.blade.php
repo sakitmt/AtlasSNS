@@ -2,35 +2,55 @@
 
 @section('content')
 
-{!! Form::open() !!}
+<div class="login-full">
+    {!! Form::open() !!}
+    <div class="login-title">
+        <h1>
+            <img class="atlas-img" src="images/atlas.png">
+        </h1>
+        <p class="s-title">
+            Social Network Service
+        </p>
 
-<h2>新規ユーザー登録</h2>
+        <div class="register-content">
+            <h2 class="welcome-msg">新規ユーザー登録</h2>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+            <div class="register-form">
+                {{ Form::label('username') }}
+                    @if ($errors->has('username'))
+                        <div class="alert alert-dange">{{$errors->first('username')}}</div>
+                    @endif
+                {{ Form::text('username',null,['class' => 'register-input']) }}
 
-{{ Form::label('メールアドレス') }}
-{{ Form::text('mail',null,['class' => 'input']) }}
+                {{ Form::label('mail') }}
+                    @if ($errors->has('mail'))
+                        <div class="alert alert-dange">{{$errors->first('mail')}}</div>
+                    @endif
+                {{ Form::text('mail',null,['class' => 'register-input']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+                {{ Form::label('password') }}
+                    @if ($errors->has('password'))
+                        <div class="alert alert-dange">{{$errors->first('password')}}</div>
+                    @endif
+                {{ Form::password('password',['class' => 'register-input']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+                {{ Form::label('password confirm') }}
+                    @if ($errors->has('password_confirmation'))
+                        <div class="alert alert-dange">{{$errors->first('password_confirmation')}}</div>
+                    @endif
+                {{ Form::password('password_confirmation',['class' => 'register-input']) }}
 
-{{ Form::submit('登録') }}
+                <div class="update-btn">
+                    {{ Form::submit('REGISTER',['class' => 'btn btn-danger']) }}
+                </div>
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
-
-{!! Form::close() !!}
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+            </div>
+            <p class="turn-back">
+                <a class="new-user" href="/login">ログイン画面へ戻る</a>
+            </p>
+        </div>
     </div>
-@endif
+    {!! Form::close() !!}
 
+</div>
 @endsection

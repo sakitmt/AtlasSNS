@@ -1,14 +1,14 @@
 @extends('layouts.login')
 
 @section('content')
-<div class="post-area-top">
+<div class="post-area-top"><!-- 投稿エリア -->
     <form class="post-area" action="{{ url('top') }}" method="POST">
     {{ csrf_field() }}
         <div class="user-icon-area">
             <img class="rounded-circle"  width="50" height="50" src="{{ asset('storage/user_images/' .auth()->user()->images )}}">
         </div>
         <div class="post-content-area">
-            {{ Form::textarea("post_con",null,['class' => 'input post-content', 'placeholder' => '投稿内容を入力してください。', 'cols'=>'70' , 'rows' => '5']) }}
+            {!! Form::textarea("post_con",null,['class' => 'input post-content', 'placeholder' => '投稿内容を入力してください。', 'cols'=>'70' , 'rows' => '5'])!!}
         </div>
         <div class="post-btn-area">
             <input class="post-btn" type="image" src="images/post.png" alt="送信ボタン">
@@ -45,7 +45,7 @@
             </div>
             <div class="area-post">
                 <!--    投稿本文    -->
-                <tr>{{ $post -> post }}</tr>
+                <tr>{!! nl2br($post -> post) !!}</tr>
             </div>
             <div class="area-btn">
                 @if (Auth::user()->id == $post->user_id)
@@ -67,19 +67,21 @@
 </form>
 @endforeach
 <!-- モーダルの中身 -->
+
 <div class="modal js-modal">
-    <div class="modal__bg js-modal-close">
+    <div class="modal_bg js-modal-close">
     </div>
-    <div class="modal__content">
+    <div class="modal_content">
         <form action="/update" method="post">
-            <textarea name="upPost" class="modal_post"></textarea>
+            <textarea name="upPost" class="modal_post">
+            </textarea>
             <input type="hidden" name="id" class="modal_id" value="">
             <a class="js-modal-update" href="" post_id={{ $post -> id }}>
-                <input type="image" src="images/edit.png" value="更新">
+                <input class="modal-post-img" type="image" src="images/edit.png" value="更新">
             </a>
             @csrf
         </form>
-       <a class="js-modal-close" href="">閉じる</a>
+       <a class="js-modal-close-btn" href="">閉じる</a>
     </div>
 </div>
 

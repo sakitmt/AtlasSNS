@@ -191,11 +191,8 @@ a {
     text-align: right;
     padding-right: 10px;
 }
-.user-icon {
-    height: 45px;
-}
 .post-content-area {
-    flex-basis: 60%;
+    flex-basis: 70%;
     padding: 0 18px 18px 18px;
     top: 0;
     word-break: normal;
@@ -217,13 +214,15 @@ textarea::placeholder {
     white-space: normal;
 }
 .post-btn-area {
-    flex-basis: 25%;
+    flex-basis: 15%;
     margin-top: auto;
 }
 .post-btn {
     height: 45px;
     padding-bottom: 10px;
 }
+
+
 
 /* 投稿表示エリア */
 .area-browsing {
@@ -243,6 +242,8 @@ textarea::placeholder {
 }
 .area-username {
     display: flex;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 .area-daytime {
     margin-left: auto;
@@ -250,6 +251,7 @@ textarea::placeholder {
     font-size: 10px;
 }
 .area-post {
+    width: 90%;
     padding-top: 15px;
 }
 .area-btn {
@@ -262,6 +264,11 @@ textarea::placeholder {
 .trash-btn {
     height: 45px;
 }
+.trash-img {
+    height: 35px;
+}
+
+/*投稿編集モーダル*/
 .modal{
     display: none;
     height: 100vh;
@@ -269,13 +276,13 @@ textarea::placeholder {
     top: 0;
     width: 100%;
 }
-.modal__bg{
+.modal_bg{
     background: rgba(0,0,0,0.8);
     height: 100vh;
     position: absolute;
     width: 100%;
 }
-.modal__content{
+.modal_content{
     background: #fff;
     left: 50%;
     padding: 40px;
@@ -283,11 +290,27 @@ textarea::placeholder {
     top: 50%;
     transform: translate(-50%,-50%);
     width: 60%;
+    border-radius: 10px;
 }
-.trash-img {
-    height: 35px;
+.modal_post {
+    resize: none;
+    height: 25vh;
+    width: 100%;
+    border-radius: 0%;
+    padding: 15px;
 }
-
+.modal-post-img {
+    height: 40px;
+    width: 40px;
+}
+.js-modal-update {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+.js-modal-close-btn {
+    display: none;
+}
 
 /*ユーザー検索フォーム*/
 .search-form {

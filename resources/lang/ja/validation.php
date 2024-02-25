@@ -137,9 +137,7 @@ return [
     */
 
     'custom' => [
-        '属性名' => [
-            'ルール名' => 'カスタムメッセージ',
-        ],
+        'password' => [],
     ],
 
     /*
@@ -159,6 +157,7 @@ return [
         'username' => 'ユーザー名',
         'mail' => 'メールアドレス',
         'password' => 'パスワード',
-        'password confirmation' => 'パスワード確認',
+        'password_confirmation' => 'パスワード確認'
     ],
+
 ];
